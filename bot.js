@@ -16,7 +16,8 @@ bot.on('message_created', async (ctx) => {
   console.log(`userText: `, userText)
 
   if (!userText) return
-  if (isGroupChat(ctx.chatId) && !allowedChatIds.includes(ctx.chatId) && !userText.includes(botMention)) return
+  if (isGroupChat(ctx.chatId) && !userText.includes(botMention)) return
+  if (isGroupChat(ctx.chatId) && !allowedChatIds.includes(ctx.chatId)) return
 
   const bestMatch = findBestMatch(userText)
   const text = bestMatch ? `<i>${bestMatch.question}</i>\n${bestMatch.answer}` : notFound
