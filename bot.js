@@ -26,7 +26,7 @@ bot.on('message_created', async (ctx) => {
 const sendNotification = (msg) => bot.api.sendMessageToChat(-79220818271578, msg)
 
 cron.schedule(
-  '0 13 * * *',
+  '0 14 * * *',
   async () => {
     try {
       const today = new Date().getDate()
