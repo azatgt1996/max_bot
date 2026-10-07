@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file=.env bot.js"
+    "start_pooling": "node --env-file=.env pooling.js",
+    "start_webhook": "node --env-file=.env webhook.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "description": "",
   "dependencies": {
     "@maxhub/max-bot-api": "^0.3.1",
+    "express": "^5.2.1",
     "node-cron": "^4.6.0",
     "undici": "^8.10.2"
   }

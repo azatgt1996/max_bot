@@ -1,4 +1,3 @@
-import { Agent, fetch as undiciFetch } from 'undici'
 import { knowledgeBase } from './consts.js'
 
 function normalizeText(text) {
@@ -27,10 +26,3 @@ export function findBestMatch(userText) {
 }
 
 export const isGroupChat = (chatId) => chatId < 0
-
-export const insecureFetch = (url, options = {}) => {
-  return undiciFetch(url, {
-    ...options,
-    dispatcher: new Agent({ connect: { rejectUnauthorized: false } }),
-  })
-}
