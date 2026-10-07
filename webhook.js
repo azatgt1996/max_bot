@@ -1,6 +1,7 @@
 import express from 'express'
 import { Bot } from '@maxhub/max-bot-api'
 import cron from 'node-cron'
+import init from './common.js'
 
 const bot = new Bot(process.env.BOT_TOKEN)
 init(bot, cron)
