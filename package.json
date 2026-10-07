@@ -2,11 +2,11 @@
   "name": "max_bot",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "webhook.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start_pooling": "node --env-file=.env pooling.js",
-    "start_webhook": "node --env-file=.env webhook.js"
+    "start_pooling": "node pooling.js",
+    "start_webhook": "node webhook.js"
   },
   "keywords": [],
   "author": "",
